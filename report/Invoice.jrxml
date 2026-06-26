@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Invoice" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="INVOICE_ID" class="java.lang.String"/>
+	<parameter name="ISSUE_DATE" class="java.lang.String"/>
+	<parameter name="PAYMENT_METHOD" class="java.lang.String"/>
+	<parameter name="RESERVER_ID" class="java.lang.String"/>
+	<parameter name="RESERVER_NAME" class="java.lang.String"/>
+	<parameter name="RESERVER_EMAIL" class="java.lang.String"/>
+	<parameter name="RESERVER_ADDRESS" class="java.lang.String"/>
+	<parameter name="CHECK_IN" class="java.lang.String"/>
+	<parameter name="CHECK_OUT" class="java.lang.String"/>
+	<parameter name="TOTAL_AMOUNT" class="java.lang.String"/>
+	<parameter name="DISCOUNT" class="java.lang.String"/>
+	<parameter name="FINAL_AMOUNT" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="COLUMN_0" class="java.lang.String"/>
+	<field name="COLUMN_1" class="java.lang.String"/>
+	<field name="COLUMN_2" class="java.lang.String"/>
+	<field name="COLUMN_3" class="java.lang.String"/>
+	<field name="COLUMN_4" class="java.lang.String"/>
+	<field name="COLUMN_5" class="java.lang.String"/>
+	<title>
+		<band height="50" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="-20" width="595" height="70" backcolor="#FFD608" uuid="88d16e82-86ba-4e12-bdf6-1330988cbbe6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<image hAlign="Center" vAlign="Middle">
+					<reportElement x="72" y="11" width="50" height="50" uuid="e60eb1c9-4a7c-44aa-b8e6-d1ddd579dc6a"/>
+					<imageExpression><![CDATA["C:/Users/dulan/Downloads/logo.jpg"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="251" y="11" width="100" height="30" uuid="c052ef7e-0192-408e-838f-ea27a30f3087"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Old English Text MT" size="25" isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Dulana]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="31" width="123" height="30" forecolor="#FC1E2D" uuid="de497c1d-8ba5-4727-b135-539961aaa77d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Algerian" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Beach Resort]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="226">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="0" width="594" height="10" backcolor="#0F72FC" uuid="5c4627f3-1265-4eed-941c-4ad8abf96784"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement mode="Transparent" x="20" y="20" width="124" height="45" forecolor="#F01326" backcolor="#2B4DD6" uuid="a82a94b3-0b32-408d-9c98-96b9c3b61688">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dubai" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INVOICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="80" width="80" height="18" backcolor="#169EF2" uuid="c6251671-3a34-48ce-8d33-e73ac825b3c5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice ID     :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="98" width="80" height="18" backcolor="#169EF2" uuid="97d12e67-f93c-4969-975b-78ebddc32654">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Issue Date    :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="80" y="80" width="80" height="18" backcolor="#C6F3F7" uuid="10a14185-659a-4828-8b89-de4ce8e252a7"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{INVOICE_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="80" y="98" width="80" height="18" backcolor="#C6F3F7" uuid="5a452e1a-65c7-4d07-86e0-56b19560899f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ISSUE_DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="430" y="20" width="126" height="20" backcolor="#4FEB2D" uuid="9b1d4c76-0802-4683-bd1d-2e45b3f8bc85">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Rounded MT Bold"/>
+				</textElement>
+				<text><![CDATA[Payment Method]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="430" y="40" width="126" height="22" backcolor="#C8FCAE" uuid="9ff91453-be17-4371-ad06-3cbb9c77eef5"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PAYMENT_METHOD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="320" y="88" width="100" height="18" uuid="48d0e1b0-47ac-4aa7-acc0-22d18cb6f2cd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reserver ID            :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="106" width="100" height="18" uuid="731d6af6-677c-42d7-93a7-956e524e0b5c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reserver Name      :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="124" width="100" height="18" uuid="4c8ffb74-1b20-4f86-83f2-6b3b77b60913">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reserver Email      :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="142" width="100" height="24" uuid="e6fa6727-fb04-4857-9713-aa9ce208f7aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reserver Address :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="167" width="100" height="18" uuid="8e028733-9ed3-4e95-98a7-a56a53020bb7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Check In                 :-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="185" width="100" height="19" uuid="b114e64b-4038-4cfc-a40c-978d0d4c361e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Check Out              :-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="88" width="135" height="18" uuid="563ab872-dc1d-4859-96c9-be4db0dee591"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RESERVER_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="106" width="135" height="18" uuid="f9815ce7-553a-43bc-bf51-76f1d7572981"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RESERVER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="124" width="135" height="18" uuid="14be8ccb-583f-4e0a-99a4-1fbb6fed4fe3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RESERVER_EMAIL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="142" width="135" height="24" uuid="422b23b1-6ceb-4d52-aa01-aff494d6e661">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RESERVER_ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="167" width="135" height="18" uuid="1bc616d6-a9a2-49c1-8700-ea231c118061"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CHECK_IN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="185" width="135" height="18" uuid="9aba5f7f-225b-49ab-b30c-aa927a563a67"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CHECK_OUT}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="110" y="140" width="78" height="64" uuid="a4bac88d-d5d5-47f8-ae4b-7c043f625416"/>
+				<imageExpression><![CDATA["C:/Users/dulan/Downloads/plate-with-cutlery-and-glass-from-top-view-svgrepo-com.png"]]></imageExpression>
+			</image>
+			<image hAlign="Center">
+				<reportElement x="200" y="140" width="80" height="59" uuid="a219a7be-772c-4bef-81d4-d59947c3b39b"/>
+				<imageExpression><![CDATA["C:/Users/dulan/Downloads/coffee-svgrepo-com.png"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="20" y="143" width="67" height="60" uuid="ae679ced-8611-4980-91d8-9546fb2e042b"/>
+				<imageExpression><![CDATA["C:/Users/dulan/Downloads/bed-6-svgrepo-com.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="46">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="20" width="79" height="26" backcolor="#FA9632" uuid="d2f6a651-0f0a-44f9-9b1e-ad2bb8809df9"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="78" y="20" width="172" height="26" backcolor="#FA9632" uuid="330f7ff6-dd2d-4172-a80e-c9432a133fd1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="320" y="20" width="80" height="26" backcolor="#FA9632" uuid="cd64902b-9fd9-4d9c-b138-8c89f6695f8b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit Price (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="400" y="20" width="77" height="26" backcolor="#FA9632" uuid="f7d2a123-a82b-4cbe-b5ad-7811c6ae20b2"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="477" y="20" width="79" height="26" backcolor="#FA9632" uuid="3319dd29-c9cf-41d2-a6ce-187c0e44d234"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="250" y="20" width="70" height="26" backcolor="#FA9632" uuid="bf76b0cd-e3db-47dc-9ff6-b82bd804de6d"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="78" height="20" backcolor="#FCE1AE" uuid="5dfd4229-5673-42de-b101-3066a52ea71b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_0}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="78" y="0" width="172" height="20" backcolor="#FCE1AE" uuid="3e6376c4-acf8-4e0e-bbe6-36eba40506d3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="250" y="0" width="70" height="20" backcolor="#FCE1AE" uuid="fe5bed68-fd7d-4b18-8ebe-6a83446d468f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="320" y="0" width="80" height="20" backcolor="#FCE1AE" uuid="8403176c-7824-4e28-b686-f6b6ccb321fa"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="400" y="0" width="77" height="20" backcolor="#FCE1AE" uuid="48eb6daa-8e6a-4d67-bf41-14b98eb8bc3d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="477" y="0" width="79" height="20" backcolor="#FCE1AE" uuid="3bec568f-655b-428d-b84e-5dbb31fced7e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_5}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="132">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="13" y="0" width="147" height="132" uuid="8cba5ada-571f-4dcd-9dcc-9497122c1a46"/>
+				<imageExpression><![CDATA["C:/Users/dulan/Downloads/invoice.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="92" width="100" height="20" backcolor="#FFCDC9" uuid="de61a5fc-3ba0-4cf9-a9cb-8eb4344160bf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Discount (10%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="72" width="100" height="20" backcolor="#FFEDEB" uuid="ae672b47-5bbd-4cf3-8deb-6bf0d2cc7095">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Amount (Rs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="112" width="100" height="20" backcolor="#F73C39" uuid="da2edc8d-098b-4c08-8e9b-87be108be699">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Final Amount (Rs)]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="460" y="112" width="96" height="20" backcolor="#F73C39" uuid="f35ca53c-e244-42c7-8e01-61ee46074961"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{FINAL_AMOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="460" y="92" width="96" height="20" backcolor="#FFCDC9" uuid="cb6883db-3fc7-4ab2-8492-d2b7786cb119"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{DISCOUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="460" y="72" width="96" height="20" backcolor="#FFEDEB" uuid="1467264c-0d6c-4959-b028-51e0b23326c7"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{TOTAL_AMOUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<lastPageFooter>
+		<band height="130">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="-1" y="100" width="556" height="30" backcolor="#C7C9C9" uuid="36aa233d-4305-48e6-974a-1bbf89bb3c8f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Algerian" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[. . . THANK YOU FOR YOUR PRASENCE . . .   AND    . . . COME AGAIN . . .]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="20" width="100" height="20" forecolor="#2B5FAD" uuid="be7b4172-651d-455c-b23b-1ffc0363c376">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Old English Text MT" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Dulana]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="30" width="100" height="20" forecolor="#F71E33" uuid="c16ef3db-e862-4a08-81f2-e16bc1ee4487">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Algerian" size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Beach Resort]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="50" width="124" height="12" uuid="fa8eaba2-875a-4c88-b1ce-f78673810fe2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[No 5A, Sea Road, Magalle , Galle.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="59" width="124" height="12" uuid="fffad497-0dfa-41c6-adab-d5422bbb9cca">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[info@dulanabeachresort.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="70" width="124" height="12" uuid="f9bfa745-2232-4ab5-9b3e-a86fc5c6d1ae">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Tel - 0778526993 / 0762046551]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="56" width="122" height="14" uuid="03437291-2e0a-4ca5-a632-1f93fdea2a28"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Visit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="72" width="146" height="14" forecolor="#253DF5" uuid="46b6f492-679f-4da3-87aa-9847ba84a3d0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[www.dulanabeachresort.lk]]></text>
+			</staticText>
+			<image>
+				<reportElement x="260" y="30" width="51" height="51" uuid="2ab578df-c706-4a08-afaf-2b02e0d411cb"/>
+				<imageExpression><![CDATA["C:/Users/dulan/Downloads/hotel-svgrepo-com.png"]]></imageExpression>
+			</image>
+		</band>
+	</lastPageFooter>
+</jasperReport>
